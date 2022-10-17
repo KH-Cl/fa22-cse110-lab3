@@ -1,0 +1,118 @@
+/*establish special font*/
+@font-face {
+    font-family: "fancyFont";
+    src: url("PirataOne-Regular.ttf");
+}
+
+/*adjust text and background color*/
+*{
+    color: rgb(167, 112, 2);
+    background-color: antiquewhite;
+}
+
+/*add border to nav*/
+nav{
+    position: static;
+    border-style: groove;
+    border-color: hsla(270, 20%, 75%, 0.50);
+    border-width: 2.5ch;
+    border-radius: 1cm;
+    text-align: left;
+}
+
+/*add decor and padding to summary*/
+summary{
+    text-decoration: underline overline #9728ffc1;
+    padding-top: 0px;
+    padding-bottom: 2vh;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+details{
+    padding: 2% 2%;
+}
+
+/*Headers are in special font*/
+h1, h2, h3{
+    font-family: "fancyFont";
+}
+
+/*add effect to clicking button*/
+.submitBtn:active{
+    box-shadow: 2px 2px 5px orchid;
+    margin: auto;
+}
+
+/*add highlight when hovering over link*/
+a:hover{
+    background-color: rgb(210, 225, 50);
+}
+
+/*margin to checkboxes*/
+input[type=checkbox]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 0px;
+}
+
+/*margin to radio*/
+#exp{
+    margin: 10px 10px 0px 50px;
+}
+
+/*logo follows for top bit*/
+img{
+    position: sticky;
+    top: 0.5pc;
+    max-width:fit-content;
+    max-height:fit-content;
+}
+
+/*size down video*/
+video{
+    height: 25vh;
+    width: 25vw;
+}
+
+/*flex display + general sibling*/
+header ~ *{
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+    gap: 20px;
+}
+
+/*grid display*/
+.media{
+    display: grid;
+    gap:10px;
+    justify-items: right;
+    align-items: stretch;
+}
+
+/*footer disappears*/
+footer{
+    display: none;
+}
+
+#agenda{
+    display: block;
+}
+
+/*descendent*/
+fieldset label{
+    background-color: tan;
+}
+
+/*adjacent*/
+img + nav{
+    background-color:azure;
+}
+
+/*child*/
+ul > li{
+    font-size: 10px;
+}
+

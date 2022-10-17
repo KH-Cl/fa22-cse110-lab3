@@ -3,6 +3,7 @@
   <head>
     <title>The Lassies' Minutes</title>
     <link rel="icon" href="icon.ico"/>
+    <link rel="stylesheet" href="mmstyle.css">
     <meta charset="utf-8" />
   </head>
   <body>
@@ -21,27 +22,39 @@
             </li>
           </ul>
         </nav>
-        <h1> Meeting Minutes</h1>
-        <h3>11/25/07</h3>
-        <div>as written by Two Toes Ed</div>
-        <br>
-        Note: If you are looking for Lassie from <i>Lassie Come-Home</i>, click <a href="https://en.wikipedia.org/wiki/Lassie">here</a>.
+        <section>
+          <h1> Meeting Minutes</h1>
+          <h3>11/25/07</h3>
+          <style>
+            @media (min-width: 5in){
+              div{
+                background-color: tan;
+              }
+            }
+          </style>
+          <div>as written by Two Toes Ed</div>
+          <br>
+          Note: If you are looking for Lassie from <i>Lassie Come-Home</i>, click <a href="https://en.wikipedia.org/wiki/Lassie">here</a>.
+        </section>
     </header>
     <main>
-        <h2>Attendance</h2>
-        <ul>
+        <section>
+          <h2>Attendance</h2>
+          <ul>
             <li>Capt. Violet</li>
             <li>Hookjaw</li>
             <li>Kabernash</li>
             <li>Two Toes Ed</li>
-        </ul>
-        <h2>Agenda</h2>
-        <ol>
-            <li>Recruitment</li>
-            <li>Practicing Pirate-Speak</li>
-            <li>PR & Networking</li>
-        </ol>
-        <hr>
+          </ul>
+        </section>
+        <section id="agenda">
+          <h2>Agenda</h2>
+          <ol>
+              <li>Recruitment</li>
+              <li>Practicing Pirate-Speak</li>
+              <li>PR & Networking</li>
+          </ol>
+        </section>
         <section>
           <h2>Post-Meeting Results</h2>
           <p>We have decided that the best course of action is to try to widen our recruitment net by creating a <b>website</b>. 
@@ -55,12 +68,15 @@
               Someone unskilled at sea
             </details>
         </section>
-        <h2>Recording</h2>
-        <audio controls src="516076__breviceps__pirate-band-performs-drunken-sailor.wav">
-        </audio>
-        <video controls>
-          <source src="SketchUpRotation.mp4" type="video/mp4">
-        </video>
+        <section class="media">
+          <h2>Recording</h2>
+          <audio controls src="516076__breviceps__pirate-band-performs-drunken-sailor.wav">
+          </audio>
+          Credit to breviceps on FreeSound for the audio
+          <video controls class="media">
+            <source src="SketchUpRotation.mp4" type="video/mp4">
+          </video>
+        </section>
     </main>
     <footer>
       End of Minutes
@@ -71,14 +87,14 @@
     <form>
       <fieldset>
         How much experience do you have with the sea? (This doesn't have to be related specifically to pirating)
-        <input type="radio" id="exp0" name="exp" value="exp0">
-        <label for="exp0">Self-identified landlubber</label>
-        <input type="radio" id="exp1" name="exp" value="exp1">
-        <label for="exp1">A little</label>
-        <input type="radio" id="exp2" name="exp" value="exp2">
-        <label for="exp0">Moderate</label>
-        <input type="radio" id="exp3" name="exp" value="exp3">
-        <label for="exp0">I'm an old seadog</label>
+        <input type="radio" id="exp", name="exp">
+        <label>Landlubber</label>
+        <input type="radio" id="exp", name="exp">
+        <label>A little</label>
+        <input type="radio" id="exp", name="exp">
+        <label>Moderate</label>
+        <input type="radio" id="exp", name="exp">
+        <label>I'm an old seadog</label>
         <br>
         What interests you about the pirate life?
         <br>
@@ -115,10 +131,11 @@
           <option value="Yo ho ho!">
         </datalist>
         <br>
-        <label>When can you start?</label>
-        <input type="date">
+        When can you start?
+        <input type="date"> 
+        <br>         
+        <button class="submitBtn">Submit Form</button>
       </fieldset>
-      <button>Submit Form</button>
     </form>
   </body>
 </html>
